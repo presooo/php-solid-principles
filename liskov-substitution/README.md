@@ -13,3 +13,8 @@ Putting it simply in 5 sentences:
 4. Child function post-conditions cannot be lesser than parent function post-conditions.
 
 5. Exceptions thrown by child method must be the same as or inherit from an exception thrown by the parent method.
+
+
+# How to achieve
+The behavior of the sub-classes must respect the contract established in the super-class
+Maintain functional correctness to be able to apply OCP

@@ -4,21 +4,23 @@
  * Issue: In the future, if a new type(Part-time Employee) comes then the code needs to be modified 
  * to calculate the salary based on employee type.
  */
-class EmployeeSalary
+class EmployeeSalaryService
 {
-    public function calculate(Employee $employee): Salary
+    public function salary(Employee $employee): Salary
     {
         $type = $employee->getType();
 
+        $salary = 0;
+
         switch ($type) {
             case Employee::PERMANENT:
-                return;
+                $salary = $employee->basicPay() + $employee->totalWorkingDays() + $employee->bonus();
                 break;
             case Employee::CONTRACTOR:
-                return;
+                $salary = $employee->basicPay() + $employee->totalWorkingDays();
                 break;
         }
 
-        throw new Exception("Employee type not recognised...");
+        return $salary;
     }
 }

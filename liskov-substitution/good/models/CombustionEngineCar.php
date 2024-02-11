@@ -6,9 +6,4 @@ class CombustionEngineCar extends Car
     {
         // TBC
     }
-
-    public function start(): void
-    {
-        // TBC
-    }
 }

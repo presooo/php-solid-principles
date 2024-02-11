@@ -1,6 +1,6 @@
 <?php
 
-class CloudTrailRepository
+class CloudTrailRepository implements LogRepositoryInterface
 {
     public function log(): void
     {

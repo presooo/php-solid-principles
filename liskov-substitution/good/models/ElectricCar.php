@@ -6,9 +6,4 @@ class ElectricCar extends Car
     {
         // TBC
     }
-
-    public function start(): void
-    {
-        // TBC
-    }
 }
